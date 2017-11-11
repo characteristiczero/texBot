@@ -32,7 +32,7 @@ import           Data.Sequence
 import           Network.Wai
 import           Network.Wai.Handler.Warp
 import           Servant
-import           GHC.Generics
+import           GHC.Generics hiding (from)
 import           Network.HTTP.Client (newManager, Manager)
 import           Network.HTTP.Client.TLS  (tlsManagerSettings)
 import           Web.Telegram.API.Bot
@@ -85,11 +85,29 @@ botServer = returnVersion :<|> handleWebhook
                  then handleUpdate update
                  else throwError err403
 
+
 handleUpdate :: Update -> Bot ()
 handleUpdate update = do
     case update of
 --      Update { ... } more cases will go here
+        Update { message = Just msg } -> handleMessage msg
         _ -> liftIO $ putStrLn $ "Handle update failed. " ++ show update
+
+
+handleMessage :: Message -> Bot ()
+handleMessage msg = do
+    BotConfig{..} <- ask
+    let chatId = ChatId $ fromIntegral $ user_id $ fromJust $ from msg
+        messageText = text msg
+        sendHelpMessage = sendMessageM (helpMessage chatId) >> return ()
+        onCommand (Just (T.stripPrefix "/help" -> Just _)) = sendHelpMessage
+        onCommand _ = sendHelpMessage
+    liftIO $ runClient (onCommand messageText) telegramToken manager
+    return ()
+
+
+helpMessage userId = sendMessageRequest userId $ T.unlines
+    [ "/help - show this message"]
 
 startApp :: IO ()
 startApp = do

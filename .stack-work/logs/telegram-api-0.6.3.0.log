@@ -3,3 +3,19 @@ Building telegram-api-0.6.3.0...
 Preprocessing library telegram-api-0.6.3.0...
 [ 1 of 15] Compiling Web.Telegram.API.Bot.JsonExt ( src/Web/Telegram/API/Bot/JsonExt.hs, .stack-work/dist/x86_64-linux-nopie/Cabal-1.24.2.0/build/Web/Telegram/API/Bot/JsonExt.o )
 [ 2 of 15] Compiling Web.Telegram.API.Bot.Data ( src/Web/Telegram/API/Bot/Data.hs, .stack-work/dist/x86_64-linux-nopie/Cabal-1.24.2.0/build/Web/Telegram/API/Bot/Data.o )
+[ 3 of 15] Compiling Web.Telegram.API.Bot.Responses ( src/Web/Telegram/API/Bot/Responses.hs, .stack-work/dist/x86_64-linux-nopie/Cabal-1.24.2.0/build/Web/Telegram/API/Bot/Responses.o )
+[ 4 of 15] Compiling Web.Telegram.API.Bot.API.Core ( src/Web/Telegram/API/Bot/API/Core.hs, .stack-work/dist/x86_64-linux-nopie/Cabal-1.24.2.0/build/Web/Telegram/API/Bot/API/Core.o )
+[ 5 of 15] Compiling Web.Telegram.API.Bot.API.Get ( src/Web/Telegram/API/Bot/API/Get.hs, .stack-work/dist/x86_64-linux-nopie/Cabal-1.24.2.0/build/Web/Telegram/API/Bot/API/Get.o )
+[ 6 of 15] Compiling Web.Telegram.API.Bot.API.Chats ( src/Web/Telegram/API/Bot/API/Chats.hs, .stack-work/dist/x86_64-linux-nopie/Cabal-1.24.2.0/build/Web/Telegram/API/Bot/API/Chats.o )
+[ 7 of 15] Compiling Servant.Client.MultipartFormData ( src/Servant/Client/MultipartFormData.hs, .stack-work/dist/x86_64-linux-nopie/Cabal-1.24.2.0/build/Servant/Client/MultipartFormData.o )
+[ 8 of 15] Compiling Web.Telegram.API.Bot.Requests ( src/Web/Telegram/API/Bot/Requests.hs, .stack-work/dist/x86_64-linux-nopie/Cabal-1.24.2.0/build/Web/Telegram/API/Bot/Requests.o )
+[ 9 of 15] Compiling Web.Telegram.API.Bot.API.Edit ( src/Web/Telegram/API/Bot/API/Edit.hs, .stack-work/dist/x86_64-linux-nopie/Cabal-1.24.2.0/build/Web/Telegram/API/Bot/API/Edit.o )
+[10 of 15] Compiling Web.Telegram.API.Bot.API.Messages ( src/Web/Telegram/API/Bot/API/Messages.hs, .stack-work/dist/x86_64-linux-nopie/Cabal-1.24.2.0/build/Web/Telegram/API/Bot/API/Messages.o )
+[11 of 15] Compiling Web.Telegram.API.Bot.API.Payments ( src/Web/Telegram/API/Bot/API/Payments.hs, .stack-work/dist/x86_64-linux-nopie/Cabal-1.24.2.0/build/Web/Telegram/API/Bot/API/Payments.o )
+[12 of 15] Compiling Web.Telegram.API.Bot.API.Queries ( src/Web/Telegram/API/Bot/API/Queries.hs, .stack-work/dist/x86_64-linux-nopie/Cabal-1.24.2.0/build/Web/Telegram/API/Bot/API/Queries.o )
+[13 of 15] Compiling Web.Telegram.API.Bot.API.Updates ( src/Web/Telegram/API/Bot/API/Updates.hs, .stack-work/dist/x86_64-linux-nopie/Cabal-1.24.2.0/build/Web/Telegram/API/Bot/API/Updates.o )
+[14 of 15] Compiling Web.Telegram.API.Bot.API ( src/Web/Telegram/API/Bot/API.hs, .stack-work/dist/x86_64-linux-nopie/Cabal-1.24.2.0/build/Web/Telegram/API/Bot/API.o )
+[15 of 15] Compiling Web.Telegram.API.Bot ( src/Web/Telegram/API/Bot.hs, .stack-work/dist/x86_64-linux-nopie/Cabal-1.24.2.0/build/Web/Telegram/API/Bot.o )
+Installing library in
+/home/michael/texBot/.stack-work/install/x86_64-linux-nopie/lts-8.15/8.0.2/lib/x86_64-linux-ghc-8.0.2/telegram-api-0.6.3.0-CHFQvx6s74LFGa05C79oOB
+Registering telegram-api-0.6.3.0...
