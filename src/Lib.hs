@@ -97,17 +97,25 @@ handleUpdate update = do
 handleMessage :: Message -> Bot ()
 handleMessage msg = do
     BotConfig{..} <- ask
-    let chatId = ChatId $ fromIntegral $ user_id $ fromJust $ from msg
+    let chatId = ChatId $ fromIntegral $ user_id $ fromJust $ from msg 
         messageText = text msg
+        
         sendHelpMessage = sendMessageM (helpMessage chatId) >> return ()
+        sendPhotoMessage = photoMessage chatId  >> return()
+        
         onCommand (Just (T.stripPrefix "/help" -> Just _)) = sendHelpMessage
+        onCommand (Just (T.stripPrefix "/fur" -> Just _)) = sendPhotoMessage
         onCommand _ = sendHelpMessage
     liftIO $ runClient (onCommand messageText) telegramToken manager
     return ()
 
-
 helpMessage userId = sendMessageRequest userId $ T.unlines
     [ "/help - show this message"]
+
+photoMessage userId  = do
+                    let fileUpload = localFileUpload  "/home/michael/texBot/test.png"
+                    let upload = uploadPhotoRequest userId fileUpload
+                    uploadPhotoM upload 
 
 startApp :: IO ()
 startApp = do
